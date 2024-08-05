@@ -12,5 +12,15 @@ def index():
 def menu():
     return render_template('menu.html')
 
+# About route
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+# About route
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

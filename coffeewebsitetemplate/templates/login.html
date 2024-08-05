@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Yay&#39;Koffee Website Template - Login</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <div id="page">
+        <div>
+            <div id="header">
+                <a href="{{ url_for('index') }}"><img src="../static/images/logo.png" alt="Image"></a>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li class="current"><a href="{{ url_for('login') }}">Login</a></li>
+                </ul>
+            </div>
+            <div id="body">
+                <div id="content">
+                    <div class="login-form">
+                        <h2>התחברות</h2>
+                        <form action="/login" method="POST">
+                            <label for="username">שם משתמש:</label>
+                            <input type="text" id="username" name="username" required>
+                            
+                            <label for="password">סיסמה:</label>
+                            <input type="password" id="password" name="password" required>
+                            
+                            <button type="submit">התחבר</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <p>&copy; 2024 Your Cafe. כל הזכויות שמורות.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -10,7 +10,7 @@ body {
 }
 @font-face {
 	font-family: 'UltraRegular';
-	src: url('../fonts/ultra-webfont.eot');
+	src: url('../fonts/ultra-webfont.eot'); 
 	src: url('../fonts/ultra-webfont.eot?#iefix') format('embedded-opentype'),
 	url('../fonts/ultra-webfont.woff') format('woff'),
 	url('../fonts/ultra-webfont.ttf') format('truetype'),
@@ -672,4 +672,52 @@ p a:hover {
 }
 #page div div#footer div.section div#connect a#rss:hover {
 	background: url(../images/icons.png) no-repeat -18px -84px;
+}
+/* Login Form Styling */
+#content {
+    margin: 30px auto;
+    padding: 20px;
+    background: #f5f1e6;
+    border: 1px solid #d5b084;
+    width: 300px;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-family: 'UltraRegular';
+    color: #db9e29;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+    color: #3c200b;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d5b084;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+    color: #3c200b;
+    background: #f5f1e6;
+}
+
+.login-form button {
+    padding: 10px 20px;
+    background: #db9e29;
+    color: #fff;
+    border: none;
+    font-family: 'UltraRegular';
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background: #a2b83c;
 }

@@ -4,31 +4,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Menu - Yay&#33;Koffee Website Template</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">  
 </head>
 <body>
 	<div id="page">
 		<div>
-			<div id="header">
-				<a href="index.html"><img src="../static/images/logo.png" alt="Image"></a
-				<ul>
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li class="current">
-						<a href="menu.html">Menu</a>
-					</li>
-					<li>
-						<a href="locations.html">Locations</a>
-					</li>
-					<li>
-						<a href="blog.html">Blog</a>
-					</li>
-					<li>
-						<a href="about.html">About Us</a>
-					</li>
-				</ul>
-			</div>
+		<div id="header">
+			<a href="{{ url_for('index') }}"><img src="../static/images/logo.png" alt="Image"></a>
+			<ul>
+				<li class="current">
+					<a href="{{ url_for('index') }}">Home</a>
+				</li>
+				<li>
+					<a href="{{ url_for('menu') }}">Menu</a>
+				</li>
+				<li>
+					<a href="{{ url_for('about') }}">About Us</a>
+				</li>
+				<li>
+					<a href="{{ url_for('login') }}">Login</a>
+				</li>
+			</ul>
+		</div>
 			<div id="body">
 				<div id="figure">
 					<img src="../static/images/headline-menu.jpg" alt="Image">
