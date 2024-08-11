@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>YAY COFFEE! - Login</title>
+    <title>COFFEE YAY! - Admin Login</title>
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <style>
         /* Centering the form on the screen */
@@ -22,15 +22,15 @@
 
         .form-group label {
             display: block;
-            font-size: 16px; /* Increased font size */
+            font-size: 16px;
             margin-bottom: 4px;
             color: #333;
         }
 
         .form-group input {
             width: 100%;
-            padding: 10px; /* Increased padding */
-            font-size: 16px; /* Increased font size */
+            padding: 10px;
+            font-size: 16px;
             border: 1px solid #ddd;
             border-radius: 4px;
             background-color: #fff;
@@ -47,7 +47,7 @@
 
         .btn {
             width: 100%;
-            padding: 12px; /* Increased padding */
+            padding: 12px;
             background-color: #333;
             color: white;
             border: none;
@@ -55,7 +55,7 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            font-size: 16px; /* Increased font size */
+            font-size: 16px;
         }
 
         .btn:hover {
@@ -79,7 +79,7 @@
         #footer .section ul {
             list-style-type: none;
             padding: 0;
-            font-size: 14px; /* Increased font size */
+            font-size: 14px;
         }
 
         #footer .section ul li {
@@ -100,7 +100,7 @@
             color: white;
             text-decoration: none;
             margin: 0 3px;
-            font-size: 14px; /* Increased font size */
+            font-size: 14px;
         }
 
         #footer #connect a:hover {
@@ -112,18 +112,18 @@
     <div id="page">
         <div>
             <div id="header">
-                <a href="{{ url_for('index') }}"><img src="../static/images/logo.png" alt="YAY COFFEE! Logo"></a>
+                <a href="{{ url_for('index') }}"><img src="../static/images/logo.png" alt="COFFEE YAY! Logo"></a>
                 <ul>
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('menu') }}">Menu</a></li>
                     <li><a href="{{ url_for('about') }}">About Us</a></li>
-                    <li class="current"><a href="{{ url_for('login') }}">Login</a></li>
+                    <li class="current"><a href="{{ url_for('admin_login') }}">Admin Login</a></li>
                 </ul>
             </div>
             <div id="body">
                 <div id="content">
                     <div class="login-form">
-                        <form action="/login" method="POST">
+                        <form action="/admin_login" method="POST">
                             <div class="form-group">
                                 <label for="username">Username:</label>
                                 <input type="text" id="username" name="username" required>
@@ -141,9 +141,9 @@
             </div>
             <div id="footer">
                 <div>
-                    <a href="index.html"><img src="../static/images/logo2.png" alt="YAY COFFEE! Logo"></a>
+                    <a href="index.html"><img src="../static/images/logo2.png" alt="COFFEE YAY! Logo"></a>
                     <p class="footnote">
-                        &copy; YAY COFFEE! 2024.<br>All Rights Reserved.
+                        &copy; COFFEE YAY! 2024.<br>All Rights Reserved.
                     </p>
                 </div>
                 <div class="section">
@@ -155,12 +155,12 @@
                         <li class="current"><a href="about.html">About Us</a></li>
                     </ul>
                     <div id="connect">
-                        <a href="https://www.facebook.com/YAYCOFFEE" target="_blank" id="facebook">Facebook</a>
-                        <a href="https://www.twitter.com/YAYCOFFEE" target="_blank" id="twitter">Twitter</a>
-                        <a href="https://www.instagram.com/YAYCOFFEE" target="_blank" id="instagram">Instagram</a>
+                        <a href="https://www.facebook.com/COFFEEYAY" target="_blank" id="facebook">Facebook</a>
+                        <a href="https://www.twitter.com/COFFEEYAY" target="_blank" id="twitter">Twitter</a>
+                        <a href="https://www.instagram.com/COFFEEYAY" target="_blank" id="instagram">Instagram</a>
                     </div>
                     <p>
-                        YAY COFFEE! was created with a passion for quality coffee and a commitment to our community. We invite you to experience our warm hospitality and exceptional brews. If you need any help, don't hesitate to reach out to us.
+                        COFFEE YAY! was created with a passion for quality coffee and a commitment to our community. We invite you to experience our warm hospitality and exceptional brews. If you need any help, don't hesitate to reach out to us.
                     </p>
                 </div>
             </div>
