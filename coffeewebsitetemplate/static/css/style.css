@@ -190,8 +190,9 @@ p a:hover {
 	width: 220px;
 }
 #page div div#body div div ul li div {
-	background: url(../images/bg-item-title.png) no-repeat center top;
-	height: 57px;
+
+	height: auto !important; 
+    min-height: 57px !important; 
 	float: none;
 	margin: 0 auto;
 	padding: 0;
