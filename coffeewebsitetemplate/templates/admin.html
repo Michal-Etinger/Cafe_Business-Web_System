@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAY COFFEE! - Admin</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/admin.css">
+   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 </head>
+
 <body>
     <div id="page">
-        <div id="header">
-            <a href="{{ url_for('index') }}"><img src="../static/images/logo.png" alt="YAY COFFEE! Logo"></a>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('menu') }}">Menu</a></li>
-                <li><a href="{{ url_for('about') }}">About Us</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li class="current"><a href="{{ url_for('admin') }}">Admin</a></li>
-            </ul>
+        <div>
+            <div id="header">
+                <a href="{{ url_for('index') }}"><img src="../static/images/logo.png" alt="Image"></a>
+                <ul>
+                    <li class="current">
+                        <a href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('menu') }}">Menu</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}">About Us</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('login') }}">Login</a>
+                    </li>
+                </ul>
         </div>
+
         <div id="body">
             <div id="content">
                 <div class="admin-form">
@@ -42,6 +53,7 @@
                 </div>
             </div>
         </div>
+
         <div id="footer">
             <div>
                 <a href="{{ url_for('index') }}"><img src="../static/images/logo2.png" alt="YAY COFFEE! Logo"></a>
@@ -51,12 +63,10 @@
             </div>
             <div class="section">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="locations.html">Locations</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="current"><a href="admin.html">Admin</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li class="current"><a href="{{ url_for('admin') }}">Admin</a></li>
                 </ul>
                 <div id="connect">
                     <a href="https://www.facebook.com/YAYCOFFEE" target="_blank" id="facebook">Facebook</a>
@@ -70,4 +80,5 @@
         </div>
     </div>
 </body>
+
 </html>
