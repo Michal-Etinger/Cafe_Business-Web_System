@@ -28,3 +28,24 @@ def authenticate_user(username, password):
         return user.role  # מחזיר את התפקיד של המשתמש (role)
     else:
         return None
+
+# מתפעל
+# model.py
+
+class Order(db.Model):
+    __tablename__ = 'orders'
+    id = db.Column(db.Integer, primary_key=True)
+    customer_name = db.Column(db.String(80), nullable=False)
+    items = db.Column(db.String(500), nullable=False)
+    status = db.Column(db.String(20), nullable=False, default='Open')
+
+# פונקציה לקבלת הזמנות פתוחות
+def get_open_orders():
+    return Order.query.filter_by(status='Open').all()
+
+# פונקציה לסגירת הזמנה
+def close_order(order_id):
+    order = Order.query.get(order_id)
+    if order:
+        order.status = 'Closed'
+        db.session.commit()

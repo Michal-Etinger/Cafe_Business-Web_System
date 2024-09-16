@@ -956,3 +956,125 @@ p a:hover {
     padding: 0;
     width: 940px; /* אם נדרש, הוסף כאן את הגובה */
 }
+
+/* מתפעל עיצוב */
+
+#operator-page #content {
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-table th, .orders-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.orders-table th {
+    background-color: #f2f2f2;
+}
+
+.orders-table td {
+    background-color: #fff;
+}
+
+.orders-table button {
+    padding: 8px 12px;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.orders-table button:hover {
+    background-color: #FFA500;
+}
+
+/* עיצוב דף סרגל כותרת לקוח */
+
+#page div div#header ul li a {
+	color: #db9e29;
+	display: block;
+	font-family: 'UltraRegular';
+	font-size: 16px;
+	text-decoration: none;
+}
+/* Style for Customer Page */
+#body.customer-page {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8; /* Light background for the customer page */
+}
+
+#content1 {
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    background-color: #fff; /* White background for form container */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+h2 {
+    color: #333; /* Dark text color for headers */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+	text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+	text-align: center;
+	transform: translateX(10%);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners for inputs */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button.btn {
+    background-color: #333; /* Dark background for buttons */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button.btn:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+/* Additional styling for form submission sections */
+form {
+    margin-bottom: 30px;
+}
