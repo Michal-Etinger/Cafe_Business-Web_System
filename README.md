@@ -1,10 +1,10 @@
-# Online Restaurant Order System
+# Online Cafe Web Order System
 Michal Etinger
 ## Project Overview
-The Online Restaurant Order System is designed to streamline the ordering and management process for restaurants. This web application allows users to browse the menu, add items to their cart, place orders, and make payments. The system is built with a React frontend and a Flask backend, with data stored in a SQLite database.
+The Online Cafe Order System is designed to streamline the ordering and management process for Cafe. This web application allows users to browse the menu, add items to their cart, place orders, and make payments. The system is built with a React frontend and a Flask backend, with data stored in a SQLite database.
 
 ## Project Purpose and General Explanation
-The primary goal of this project is to provide a seamless and efficient ordering experience for both customers and restaurant staff. The application supports various functionalities including user authentication, order management, and real-time menu updates.
+The primary goal of this project is to provide a seamless and efficient ordering experience for both customers and cafe staff. The application supports various functionalities including user authentication, order management, and real-time menu updates.
 
 ## User Types
 1. **Customers**: 
@@ -14,7 +14,7 @@ The primary goal of this project is to provide a seamless and efficient ordering
    - Make payments
    - Leave reviews and ratings
 
-2. **Restaurant Staff**:
+2. **Cafe Staff**:
    - Manage menu items
    - View and process orders
    - Update order statuses
