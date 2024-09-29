@@ -49,3 +49,35 @@ def close_order(order_id):
     if order:
         order.status = 'Closed'
         db.session.commit()
+
+# פתיחת הזמנה חדשה
+def new_order(customer_name, items):
+    new_order = Order(customer_name=customer_name, items=items, status="Open")
+    db.session.add(new_order)
+    db.session.commit()
+
+class Items(db.Model):
+    __tablename__ = 'Items'
+    id = db.Column(db.Integer, primary_key=True)
+    item_name = db.Column(db.String(80), nullable=False)
+    description = db.Column(db.String(500), nullable=False)
+    price = db.Column(db.Integer, nullable=False)
+
+
+def add_new_item(item_name, description, price):
+    new_item = Items(item_name=item_name, description=description, price=price)
+    db.session.add(new_item)
+    db.session.commit()
+
+
+class Review(db.Model):
+    __tablename__ = 'Review'
+    id = db.Column(db.Integer, primary_key=True)
+    review = db.Column(db.String(500), nullable=False)
+    rating = db.Column(db.Integer, nullable=False)
+    photo =  db.Column(db.PickleType(), nullable=True)
+
+def add_review(review, rating, photo):
+    new_review = Review(review=review, rating=rating, photo=photo)
+    db.session.add(new_review)
+    db.session.commit()

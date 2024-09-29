@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from model import db, User, add_user, authenticate_user, get_open_orders, close_order
+from model import db, User, add_user, authenticate_user, get_open_orders, close_order, new_order, add_new_item, add_review
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -58,6 +58,15 @@ def about():
 def admin():
     return render_template('admin.html')
 
+@app.route('/admin/add-item', methods=['POST'])
+def admin_new_item():
+    item_name = request.form['item_name']
+    description = request.form['item_description']
+    price = request.form['item_price']
+    add_new_item(item_name, description, price)
+    flash(f'Item was added', 'success')
+    return redirect(url_for('admin'))
+
 # מתפעל
 @app.route('/operator')
 def operator():
@@ -79,7 +88,7 @@ def customer():
 def place_order():
     customer_name = request.form['customer_name']
     order_items = request.form['order_items']
-    # שמירת ההזמנה בבסיס הנתונים
+    new_order(customer_name, order_items)
     flash('Your order has been placed successfully!', 'success')
     return redirect(url_for('customer'))
 
@@ -88,7 +97,7 @@ def submit_review():
     review_text = request.form['review_text']
     rating = request.form['rating']
     review_photo = request.files.get('review_photo')
-    # שמירת הביקורת בבסיס הנתונים
+    add_review(review_text, rating, review_photo)
     flash('Your review has been submitted!', 'success')
     return redirect(url_for('customer'))
 

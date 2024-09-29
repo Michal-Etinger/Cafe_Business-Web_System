@@ -51,7 +51,7 @@
                             <td>{{ order.status }}</td>
                             <td>
                                 {% if order.status == 'Open' %}
-                                <form action="{{ url_for('close_order', order_id=order.id) }}" method="POST">
+                                <form action="{{ url_for('close_order_route', order_id=order.id) }}" method="POST">
                                     <button type="submit" class="btn">Close Order</button>
                                 </form>
                                 {% else %}
